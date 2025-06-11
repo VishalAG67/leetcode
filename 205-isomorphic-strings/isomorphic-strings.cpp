@@ -10,14 +10,12 @@ public:
             char c1 = s[i];
             char c2 = t[i];
 
-            // Check if there's already a mapping from s to t
             if(mapST.count(c1)) {
                 if(mapST[c1] != c2) return false;
             } else {
                 mapST[c1] = c2;
             }
 
-            // Check reverse mapping from t to s
             if(mapTS.count(c2)) {
                 if(mapTS[c2] != c1) return false;
             } else {
